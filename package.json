@@ -1,18 +1,44 @@
 {
   "name": "@jackson.jiang/open-source-practice",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "open source practice",
   "main": "src/index.js",
   "dependencies": {
     "country-list": "^1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "codecov.io": "^0.1.6",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "ghooks": "^2.0.4",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "semantic-release": "^15.6.3",
+    "travis-deploy-once": "^5.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha ./src/index.test.js",
+    "test:watch": "npm t -- -w",
+    "cover": "nyc npm t",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "type ./coverage/lcov.info | codecov",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm t && npm run check-coverage"
+    },
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jackson-jiang/open-source-practice.git"
+    "url": "https://github.com/jackson-jiang/open-source-practice.git"
   },
   "author": "",
   "license": "ISC",
