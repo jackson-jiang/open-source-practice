@@ -5,8 +5,8 @@ cache:
     - node_modules
 notifications:
   email: false
-# node_js:
-#   - '9'
+node_js:
+  - '9'
 #   - '8'
 #   - '6'
 #   - '4'
