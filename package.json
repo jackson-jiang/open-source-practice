@@ -24,7 +24,7 @@
     "test:watch": "npm t -- -w",
     "cover": "nyc npm t",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "report-coverage": "type ./coverage/lcov.info | codecov",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
