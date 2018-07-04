@@ -1,0 +1,23 @@
+{
+  "name": "@jackson.jiang/open-source-practice",
+  "version": "1.0.0",
+  "description": "open source practice",
+  "main": "src/index.js",
+  "dependencies": {
+    "country-list": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackson-jiang/open-source-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackson-jiang/open-source-practice/issues"
+  },
+  "homepage": "https://github.com/jackson-jiang/open-source-practice#readme"
+}
