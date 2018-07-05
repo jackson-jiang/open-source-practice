@@ -5,8 +5,8 @@ var teams = [
     '中国6',
     '英格兰',
   ];
-  
-  module.exports = {
+
+  var obj = {
     all: function () {
       return teams;
     },
@@ -15,3 +15,5 @@ var teams = [
       return teams[i];
     }
   }
+  
+  module.exports = obj;
